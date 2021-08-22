@@ -1,7 +1,17 @@
+import {GlobalStyles} from './styles/Globals'
+import {InfoCard} from './components/InfoCard/Index'
+
+//fix text width on InfoCard
+
 const App = () => {
     return(
         <>
-            <p>Ok</p>
+            <GlobalStyles/>
+            <InfoCard
+                title='Title'
+                subtitle='Subtitle'
+                content='Card content'
+            />
         </>
     )
 }
