@@ -7,4 +7,15 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
     }
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
 `;

@@ -1,18 +1,6 @@
 import styled from 'styled-components'
 import ReadBarProgressProps from '../../types/ReadBarProgressProps'
 
-function progressObserver(){
-    let currentProgress = 0
-    const windowHeight = window.scrollY
-    currentProgress += window.innerHeight/windowHeight
-    console.log(currentProgress)
-    return currentProgress
-}
-
-setInterval(() => {
-    progressObserver()
-}, 100)
-
 
 export const Container = styled.div<ReadBarProgressProps>`
     position: fixed;
@@ -24,7 +12,7 @@ export const Container = styled.div<ReadBarProgressProps>`
     `
 
 export const Progress = styled.div<ReadBarProgressProps>`
-    width: ${() => progressObserver() + 'px'};
+    width: 100%;
     background: ${props => props.gradientBackground? 
      `linear-gradient(to right, ${props.gradientStartColor}, ${props.gradientEndColor});` 
      : props.background };
