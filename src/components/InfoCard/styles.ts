@@ -14,7 +14,7 @@ export const Container = styled.div<InfoCardProps>`
     box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
     text-overflow: ellipsis;
-    background: ${props => props.style?.background};
+    background: ${props => props.style?.background || '#fff'};
     border-radius: ${props => props.style?.borderRadius || '4px'};
     transition: all .3s ease-in-out;
 
