@@ -1,6 +1,8 @@
 import {GlobalStyles} from './styles/Globals'
-import {InfoCard} from './components/InfoCard/Index'
-import {ReadBarProgress} from './components/ReadBarProgress/Index'
+import {InfoCard} from './components/InfoCard'
+import {ReadBarProgress} from './components/ReadBarProgress'
+import {Dialog} from './components/Dialog'
+
 
 //fix text width on InfoCard
 //do progressbarread works
@@ -23,23 +25,9 @@ const App = () => {
                 content='Card content'
                 animationOnHover    
             />
-            <InfoCard
-                title='Title'
-                subtitle='Subtitle'
-                content='Card content'
-                animationOnHover    
-            />
-            <InfoCard
-                title='Title'
-                subtitle='Subtitle'
-                content='Card content'
-                animationOnHover    
-            />
-            <InfoCard
-                title='Title'
-                subtitle='Subtitle'
-                content='Card content'
-                animationOnHover    
+            <Dialog
+                title='Modal'
+                content='Are you sure for delete this item from your cart?'
             />
         </>
     )
