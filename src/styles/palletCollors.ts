@@ -8,9 +8,12 @@ const palletCollors = {
   black1:'#000',
   black2:'#111',
   black3:'#222',
-  gray1: '#333',
-  gray2: '#444',
-  gray3: '#555'
+  darkGray1: '#111',
+  darkGray2: '#222',
+  darkGray3: '#333',
+  lightGray1: '#666',
+  lightGray2: '#777',
+  lightGray3: '#ddd'
 };
 
 export { palletCollors };

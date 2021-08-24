@@ -8,8 +8,7 @@ import {
     TitleContainer
 } from './styles'
 
-
-const InfoCard = ({ title, content, subtitle, style, animationOnHover }: InfoCardProps) => {
+const InfoCard = ({ title, content, subtitle, style, animationOnHover, children }: InfoCardProps) => {
     return (
         <Container
             style={{
@@ -25,6 +24,7 @@ const InfoCard = ({ title, content, subtitle, style, animationOnHover }: InfoCar
             <ContentContainer>
                 <Content>{content}</Content>
             </ContentContainer>
+            {children}
         </Container>
     )
 }

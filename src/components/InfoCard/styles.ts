@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { palletCollors } from "../../styles/palletCollors";
 import InfoCardProps from "../../types/InfoCardProps";
 
 export const Container = styled.div<InfoCardProps>`
@@ -13,7 +14,7 @@ export const Container = styled.div<InfoCardProps>`
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
   text-overflow: ellipsis;
-  background: ${(props) => props.style?.background || "#fff"};
+  background: ${(props) => props.style?.background || palletCollors.white};
   border-radius: ${(props) => props.style?.borderRadius || "4px"};
   transition: all 0.3s ease-in-out;
 
@@ -30,11 +31,11 @@ export const Title = styled.h1`
 export const SubTitle = styled.h2`
   font-weight: 500;
   margin: 1rem;
-  color: #333;
+  color: ${palletCollors.black2};
 `;
 
 export const Content = styled.p`
-  color: #444;
+  color: ${palletCollors.black3};
   text-align: justify;
   width: 92%;
   font-size: 0.88rem;
@@ -49,7 +50,7 @@ export const TitleContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${palletCollors.lightGray3};
 `;
 
 export const ContentContainer = styled.div`

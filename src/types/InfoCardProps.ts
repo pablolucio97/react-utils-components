@@ -1,3 +1,5 @@
+import {ReactNode} from 'react'
+
 type InfoCardProps = {
     title?: string;
     subtitle? :string;
@@ -7,7 +9,7 @@ type InfoCardProps = {
         borderRadius?: string;
     }
     animationOnHover?: boolean;
-    
+    children?: ReactNode;
 }
 
 export default InfoCardProps

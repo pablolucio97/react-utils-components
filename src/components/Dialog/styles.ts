@@ -49,9 +49,6 @@ export const ActionsContainer = styled.div`
 `;
 
 export const ButtonClose = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   width: 16px;
   height: 16px;
