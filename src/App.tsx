@@ -5,6 +5,7 @@ import { Dialog } from './components/Dialog'
 import { ModalContextProvider } from './context/ModalContext'
 import { PrimaryButton } from './components/PrimaryButton'
 import CollapsibleContainer from './components/CollapsibleContainer'
+import { SecondaryButton } from './components/SecondaryButton'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
@@ -36,6 +37,12 @@ const App = () => {
                 <PrimaryButton
                     label='click'
                     showPressedEffect
+                    buttonStyle='solid'
+                />
+                 <SecondaryButton
+                    label='click'
+                    showPressedEffect
+                    buttonStyle='outline'
                 />
                 <CollapsibleContainer
                     title='How much it costs?'

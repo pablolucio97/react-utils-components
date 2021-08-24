@@ -1,12 +1,12 @@
-type PrimaryButtonProps = {
+type SecondaryButtonProps = {
     label: string;
     style?: {
         background?: string;
         borderRadius: string;
     }
     showPressedEffect?: boolean;
-    buttonStyle?: 'solid' | 'outline';
+    buttonStyle?: 'solid' | 'outline'
 
 }
 
-export default PrimaryButtonProps
+export default SecondaryButtonProps

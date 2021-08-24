@@ -1,5 +1,6 @@
 const palletCollors = {
   primary: "#26b7ff",
+  secondary: "#b726ff",
   succcessBackground: "#79ff79",
   successText: "#058718",
   errorBackground: "#ff7979",

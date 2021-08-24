@@ -12,28 +12,48 @@ import {
 } from './styles'
 import { MdClose } from 'react-icons/md'
 
-import {ModalContextProvider} from '../../context/ModalContext'
+import { ModalContextProvider } from '../../context/ModalContext'
+import { useState } from 'react'
 
 
-const Dialog = ({ content, title, confirmAction, cancelAction }: DialogProps) => {
+const Dialog = ({ content, title }: DialogProps) => {
+
+    const [isOpenedDialog, setIsOpenedDialog] = useState(false)
+
+    function closeDialog() {
+        setIsOpenedDialog(false)
+        console.log('closed dialog')
+        console.log(isOpenedDialog)
+    }
+
+    function openDialog() {
+        setIsOpenedDialog(true)
+        console.log('opend dialog')
+        console.log(isOpenedDialog)
+    }
+
+
+
     return (
-      <ModalContextProvider>
-            <Container>
-            <TitleContainer>
-                <Title>{title}</Title>
-            </TitleContainer>
-            <ButtonClose onClick={cancelAction}>
-                <MdClose size={24} />
-            </ButtonClose>
-            <ContentContainer>
-                <Content>{content}</Content>
-            </ContentContainer>
-            <ActionsContainer>
-                <ConfirmButton onClick={confirmAction}>OK</ConfirmButton>
-                <CancelButton onClick={cancelAction}>Cancelar</CancelButton>
-            </ActionsContainer>
-        </Container>
-      </ModalContextProvider>
+        <ModalContextProvider>
+            <Container className={
+                isOpenedDialog? '' : 'hideDialog'
+            }>
+                <TitleContainer>
+                    <Title>{title}</Title>
+                </TitleContainer>
+                <ButtonClose onClick={closeDialog}>
+                    <MdClose size={24} />
+                </ButtonClose>
+                <ContentContainer>
+                    <Content>{content}</Content>
+                </ContentContainer>
+                <ActionsContainer>
+                    <ConfirmButton onClick={openDialog}>OK</ConfirmButton>
+                    <CancelButton onClick={closeDialog}>Cancelar</CancelButton>
+                </ActionsContainer>
+            </Container>
+        </ModalContextProvider>
     )
 }
 

@@ -10,11 +10,10 @@ export const Container = styled.div`
   position: relative;
   width: 720px;
   border-radius: 4px;
-  margin: .8rem;
+  margin: 0.8rem;
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
   transition: all 1s ease all;
-
   & .expandCard {
     transition: all 1s ease all;
     display: none;
