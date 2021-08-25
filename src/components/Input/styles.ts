@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import { palletCollors } from "../../styles/palletCollors";
+import InputProps from "../../types/InputProps";
 
 export const Container = styled.div`
   position: relative;
   margin: 1.6rem;
 `
 
-export const TextInput = styled.input`
-  border: 1px solid ${palletCollors.primary};
-  border-radius: 4px;
+export const TextInput = styled.input<InputProps>`
+  border: 1px solid ${props => props.style?.borderColor? props.style.borderColor : palletCollors.primary };
+  border-radius: ${props => props.style?.borderRadius? props.style.borderRadius :  '4px' };
   min-width: 240px;
   height: 40px;
   padding: .4rem;
@@ -24,7 +25,7 @@ export const TextInput = styled.input`
   }
 
   &:focus {
-    border: 2px solid ${palletCollors.primary};
+    border: 2px solid ${props => props.style?.borderColor? props.style.borderColor : palletCollors.primary };
   }
 `;
 

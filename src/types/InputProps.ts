@@ -1,5 +1,5 @@
 type InputProps = {
-    label: string;
+    label?: string;
     placeholder?: string;
     style?: {
         borderRadius?: string;
