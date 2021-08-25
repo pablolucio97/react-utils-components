@@ -13,18 +13,18 @@ const CollapsibleContainer = ({ title, content, currentExpanded, onExpand }: Col
     }
 
     return (
-        <Container>
+        <Container >
             <Title>{title}</Title>
             <Content
-                className={isExpanded? 'expandCard' : ''}
+                className={isExpanded ? 'expandCard' : ''}
             >
                 {content}
             </Content>
             <ButtonCollapse onClick={toggleExpands}>
-                {isExpanded?
-                    <MdExpandMore size={24}/>
+                {isExpanded ?
+                    <MdExpandMore size={24} />
                     :
-                    <MdExpandLess size={24}/>
+                    <MdExpandLess size={24} />
                 }
             </ButtonCollapse>
         </Container>

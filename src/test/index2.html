@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="label-float">
+        <input type="text" placeholder=" ">
+        <label>Telefone</label>
+    </div>
+    <br>
+    <div class="label-float">
+        <input type="text" placeholder=" " required="">
+        <label>Nome de Usuário</label>
+    </div>
+    <style>
+        .label-float {
+            position: relative;
+            padding-top: 13px;
+        }
+
+        .label-float input {
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            outline: none;
+            min-width: 250px;
+            padding: 15px 20px;
+            font-size: 16px;
+            transition: all .1s linear;
+            -webkit-transition: all .1s linear;
+            -moz-transition: all .1s linear;
+            -webkit-appearance: none;
+        }
+
+        .label-float input:focus {
+            border: 2px solid #3951b2;
+        }
+
+        .label-float input::placeholder {
+            color: transparent;
+        }
+
+        .label-float label {
+            pointer-events: none;
+            position: absolute;
+            top: calc(50% - 8px);
+            left: 15px;
+            transition: all .1s linear;
+            -webkit-transition: all .1s linear;
+            -moz-transition: all .1s linear;
+            background-color: white;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .label-float input:focus+label,
+        .label-float input:not(:placeholder-shown)+label {
+            font-size: 13px;
+            top: 0;
+            color: #3951b2;
+        }
+    </style>
+</body>
+
+</html>

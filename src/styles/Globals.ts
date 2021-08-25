@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
+        transition: all .32s ease;
     }
 
     button{
@@ -13,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
         justify-content: center;
         align-items: center;
         border: none;
-        outline: none;
+        outlined: none;
         cursor: pointer;
         text-transform: uppercase;
     }

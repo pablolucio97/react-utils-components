@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   width: 720px;
   border-radius: 4px;
@@ -22,7 +22,7 @@ export const Container = styled.div`
 
 export const Title = styled.h3`
   font-weight: 500;
-  margin: 1rem;
+  margin: 0.8rem 1.6rem;
   color: ${palletCollors.black1};
 `;
 
@@ -45,3 +45,4 @@ export const ButtonCollapse = styled.button`
   top: 40%;
   transition: all 0.32s ease;
 `;
+

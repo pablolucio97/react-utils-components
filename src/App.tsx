@@ -6,6 +6,7 @@ import { ModalContextProvider } from './context/ModalContext'
 import { PrimaryButton } from './components/PrimaryButton'
 import CollapsibleContainer from './components/CollapsibleContainer'
 import { SecondaryButton } from './components/SecondaryButton'
+import Input from './components/Input'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
@@ -42,11 +43,23 @@ const App = () => {
                  <SecondaryButton
                     label='click'
                     showPressedEffect
-                    buttonStyle='outline'
+                    buttonStyle='outlined'
                 />
                 <CollapsibleContainer
                     title='How much it costs?'
                     content='It is free for 3 months and you will paid after this period.'
+                />
+                <Input
+                    label='Name'
+                    placeholder='Type your name'
+                />
+                <Input
+                    label='Email'
+                    placeholder='Type your e-mail'
+                />
+                <Input
+                    label='Password'
+                    placeholder='Type your password'
                 />
         </ModalContextProvider>
     )

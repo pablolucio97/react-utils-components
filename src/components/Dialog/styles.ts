@@ -57,7 +57,7 @@ export const ButtonClose = styled.button`
   color: ${palletCollors.white};
   font-weight: bold;
   border: none;
-  outline: none;
+  outlined: none;
   cursor: pointer;
   border-radius: 4px;
   right: 0.8rem;
@@ -75,7 +75,7 @@ export const ConfirmButton = styled.button`
   color: ${palletCollors.white};
   font-weight: 600;
   border: none;
-  outline: none;
+  outlined: none;
   cursor: pointer;
   border-radius: 4px;
   margin: 1rem;
@@ -92,7 +92,7 @@ export const CancelButton = styled.button`
   color: #222;
   font-weight: 500;
   border: none;
-  outline: none;
+  outlined: none;
   cursor: pointer;
   border-radius: 4px;
   margin: 1rem;
