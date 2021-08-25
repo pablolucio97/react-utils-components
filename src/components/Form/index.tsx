@@ -1,7 +1,4 @@
-
-
 import FormProps from '../../types/FormProps';
-
 import {
     TextInput,
     InputContainer,

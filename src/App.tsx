@@ -9,6 +9,7 @@ import { SecondaryButton } from './components/SecondaryButton'
 import Input from './components/Input'
 import Form from './components/Form'
 import { FormEvent } from 'react'
+import { Avatar } from './components/Avatar'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
@@ -73,6 +74,11 @@ const App = () => {
                 passwordPlaceholder='Type for password'
                 buttonStyle='outlined'
                 postFunction={test}
+            />
+            <Avatar
+                 urlImg='https://images.unsplash.com/photo-1629878165113-73a6276d25a6?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                 size='large'
+                 borderType='thin'
             />
         </ModalContextProvider>
     )
