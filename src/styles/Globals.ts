@@ -14,9 +14,13 @@ export const GlobalStyles = createGlobalStyle`
         justify-content: center;
         align-items: center;
         border: none;
-        outlined: none;
+        outline: none;
         cursor: pointer;
         text-transform: uppercase;
+    }
+
+    body{
+        background: #eeee
     }
 
 `;

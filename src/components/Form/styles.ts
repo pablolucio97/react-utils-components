@@ -80,11 +80,11 @@ export const PostButton = styled.button<FormProps>`
   min-width: 240px;
   height: 40px;
   background: ${(props) =>
-    props.buttonStyle === "outlined"
+    props.buttonStyle === "outline"
       ? palletCollors.white
       : palletCollors.primary};
   color: ${(props) =>
-    props.buttonStyle === "outlined"
+    props.buttonStyle === "outline"
       ? palletCollors.primary
       : palletCollors.white};
   font-weight: bold;

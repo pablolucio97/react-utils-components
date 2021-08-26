@@ -5,7 +5,7 @@ type SecondaryButtonProps = {
         borderRadius: string;
     }
     showPressedEffect?: boolean;
-    buttonStyle?: 'solid' | 'outlined'
+    buttonStyle?: 'solid' | 'outline'
 
 }
 

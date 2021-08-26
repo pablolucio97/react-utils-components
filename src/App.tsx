@@ -10,9 +10,15 @@ import Input from './components/Input'
 import Form from './components/Form'
 import { FormEvent } from 'react'
 import { Avatar } from './components/Avatar'
+import { QuestionForm } from './components/QuestionForm'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
+//create step indicator
+//create slider image
+//create footer
+//create header
+//create question-form
 
 
 const App = () => {
@@ -50,7 +56,7 @@ const App = () => {
             <SecondaryButton
                 label='click'
                 showPressedEffect
-                buttonStyle='outlined'
+                buttonStyle='outline'
             />
             <CollapsibleContainer
                 title='How much it costs?'
@@ -72,13 +78,25 @@ const App = () => {
                 namePlaceholder='Type for name'
                 emailPlaceholder='Type for email'
                 passwordPlaceholder='Type for password'
-                buttonStyle='outlined'
+                buttonStyle='outline'
                 postFunction={test}
             />
             <Avatar
                  urlImg='https://images.unsplash.com/photo-1629878165113-73a6276d25a6?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
                  size='large'
                  borderType='thin'
+            />
+            <QuestionForm
+                question='How many is 12 + 34'
+                formName='quesition1'
+                idOptionA='1'
+                idOptionB='2'
+                idOptionC='3'
+                idOptionD='4'
+                optionA='12'
+                optionB='12'
+                optionC='12'
+                optionD='12'
             />
         </ModalContextProvider>
     )

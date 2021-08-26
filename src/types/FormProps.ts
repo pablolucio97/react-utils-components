@@ -15,7 +15,7 @@ type FormProps = {
         borderColor?: string;
         background?: string;
     }
-    buttonStyle?: 'solid' | 'outlined';
+    buttonStyle?: 'solid' | 'outline';
 }
 
 export default FormProps

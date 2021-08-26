@@ -19,20 +19,19 @@ export const Container = styled.div<DialogProps>`
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: center;
-
-  `;
+`;
 
 export const Title = styled.h2`
   font-weight: 500;
   margin: 0.4rem;
-  `;
+`;
 
 export const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 0.4rem;
-  `;
+`;
 
 export const Content = styled.p`
   color: #444;
@@ -41,7 +40,7 @@ export const Content = styled.p`
   font-size: 0.88rem;
   font-weight: 400;
   word-wrap: break-word;
-  `;
+`;
 
 export const ActionsContainer = styled.div`
   display: flex;
@@ -57,7 +56,7 @@ export const ButtonClose = styled.button`
   color: ${palletCollors.white};
   font-weight: bold;
   border: none;
-  outlined: none;
+  outline: none;
   cursor: pointer;
   border-radius: 4px;
   right: 0.8rem;
@@ -75,7 +74,7 @@ export const ConfirmButton = styled.button`
   color: ${palletCollors.white};
   font-weight: 600;
   border: none;
-  outlined: none;
+  outline: none;
   cursor: pointer;
   border-radius: 4px;
   margin: 1rem;
@@ -92,14 +91,14 @@ export const CancelButton = styled.button`
   color: #222;
   font-weight: 500;
   border: none;
-  outlined: none;
+  outline: none;
   cursor: pointer;
   border-radius: 4px;
   margin: 1rem;
 `;
 
 export const HideDialog = styled.div`
-    & .hideDialog {
+  & .hideDialog {
     background: cyan;
   }
-`
+`;

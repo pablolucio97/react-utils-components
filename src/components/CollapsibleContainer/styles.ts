@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  background: ${palletCollors.white};
   width: 720px;
   border-radius: 4px;
   margin: 0.8rem;
