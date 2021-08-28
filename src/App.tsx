@@ -1,6 +1,5 @@
 import { GlobalStyles } from './styles/Globals'
 import { InfoCard } from './components/InfoCard'
-import { ReadBarProgress } from './components/ReadBarProgress'
 import { Dialog } from './components/Dialog'
 import { ModalContextProvider } from './context/ModalContext'
 import { PrimaryButton } from './components/PrimaryButton'
@@ -11,6 +10,8 @@ import Form from './components/Form'
 import { FormEvent } from 'react'
 import { Avatar } from './components/Avatar'
 import { QuestionForm } from './components/QuestionForm'
+import { Header } from './components/Header'
+import { palletCollors } from './styles/palletCollors'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
@@ -31,12 +32,18 @@ const App = () => {
     return (
         <ModalContextProvider>
             <GlobalStyles />
-            <ReadBarProgress
-                background='red'
-                barType='thin'
-                gradientBackground
-                gradientStartColor='yellow'
-                gradientEndColor='red'
+            <Header
+                logoSize='large'
+                logoUrl='https://images.unsplash.com/photo-1630046213113-111c5a2772ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
+                showReadbar
+                readBarbackground='red'
+                readBarType='thin'
+                readBargradientBackground
+                readBargradientEndColor={palletCollors.primary}
+                readBargradientStartColor={palletCollors.secondary}
+                title='React Utils Components'
+                showSearchBar
+                displayElements='spaced'
             />
             <InfoCard
                 title='Title'
