@@ -56,7 +56,7 @@ export const ExtraDataContainer = styled.div<FooterProps>`
   justify-content: center;
   background: ${palletCollors.lightGray3};
   padding: .8rem;
-  display: ${props => props.showExtraData? 'visible' : 'none'}
+  display: ${props => props.showExtraData? 'visible' : 'none'};
 `;
 
 export const ExtraDataText = styled.span`

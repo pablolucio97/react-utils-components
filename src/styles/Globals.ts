@@ -23,4 +23,9 @@ export const GlobalStyles = createGlobalStyle`
         background: #eee;
     }
 
+    a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+
 `;

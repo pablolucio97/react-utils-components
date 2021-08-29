@@ -13,6 +13,7 @@ import { QuestionForm } from './components/QuestionForm'
 import { Header } from './components/Header'
 import { palletCollors } from './styles/palletCollors'
 import { Footer } from './components/Footer'
+import SocialRibbon from './components/SocialRibbon'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
@@ -105,6 +106,13 @@ const App = () => {
                 optionB='12'
                 optionC='12'
                 optionD='12'
+            />
+            <SocialRibbon
+                iconsStyle={{
+                    iconsSize:'tiny'
+                }}
+                background='#55ff'
+                displayContent='end'
             />
             <Footer
                 titleCol1='Sobre'
