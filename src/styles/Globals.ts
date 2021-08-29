@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        background: #eeee
+        background: #eee;
     }
 
 `;

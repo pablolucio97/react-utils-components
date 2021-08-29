@@ -12,6 +12,7 @@ import { Avatar } from './components/Avatar'
 import { QuestionForm } from './components/QuestionForm'
 import { Header } from './components/Header'
 import { palletCollors } from './styles/palletCollors'
+import { Footer } from './components/Footer'
 
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
@@ -104,6 +105,40 @@ const App = () => {
                 optionB='12'
                 optionC='12'
                 optionD='12'
+            />
+            <Footer
+                titleCol1='Sobre'
+                text1Col1='JavaScript'
+                text2Col1='React'
+                text3Col1='Redddddact Native'
+                text4Col1='Node'
+                text5Col1='CSS3'
+                titleCol2='Events'
+                text1Col2='NLW'
+                text2Col2='FronBR'
+                text3Col2='JS Brasil'
+                text4Col2='CondingHire'
+                text5Col2='GoToCode'
+                titleCol3='Events'
+                text1Col3='NLW'
+                text2Col3='FronBR'
+                text3Col3='JS Brasil'
+                text4Col3='CondingHire'
+                text5Col3='GoToCode'
+                titleCol4='Events'
+                text1Col4='NLW'
+                text2Col4='FronBR'
+                text3Col4='JS Brasil'
+                text4Col4='CondingHire'
+                text5Col4='GoToCode'
+                titleCol5='Events'
+                text1Col5='NLW'
+                text2Col5='FronBR'
+                text3Col5='JS Brasil'
+                text4Col5='CondingHire'
+                text5Col5='GoToCode'
+                extraDataText='lorem isdfhskjdhfksjdfhgshkdfgsdjkhgfsdjhkfgsdfjkhsgdfjkshdfgs'
+                showExtraData
             />
         </ModalContextProvider>
     )
