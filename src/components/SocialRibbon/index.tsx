@@ -22,30 +22,47 @@ export default function SocialRibbon({
     instagramUrl,
     youtubeUrl,
     displayContent
-
-
 }: SocialRibbonProps) {
+
+    function openUrl(url?: string) {
+        window.open(url, '_blank')
+    }
+
     return (
         <Container background={background} displayContent={displayContent}>
-            <Link href={githubUrl} iconsStyle={iconsStyle}>
-                <AiFillGithub/>
+            <Link onClick={() => openUrl(githubUrl)}
+                iconsStyle={iconsStyle}
+            >
+                <AiFillGithub />
             </Link>
-            <Link href={facebookUrl} iconsStyle={iconsStyle}>
+            <Link onClick={() => openUrl(facebookUrl)}
+                iconsStyle={iconsStyle}
+            >
                 <AiFillFacebook />
             </Link>
-            <Link href={instagramUrl} iconsStyle={iconsStyle}>
+            <Link onClick={() => openUrl(instagramUrl)}
+                iconsStyle={iconsStyle}
+            >
                 <AiFillInstagram />
             </Link>
-            <Link href={whatsappUrl} iconsStyle={iconsStyle}>
+            <Link onClick={() => openUrl(whatsappUrl)}
+                iconsStyle={iconsStyle}
+            >
                 <AiOutlineWhatsApp />
             </Link>
-            <Link href={linkedinUrl} iconsStyle={iconsStyle}>
+            <Link onClick={() => openUrl(linkedinUrl)}
+                iconsStyle={iconsStyle}
+            >
                 <AiFillLinkedin />
             </Link>
-            <Link href={twitterUrl} iconsStyle={iconsStyle}>
+            <Link onClick={() => openUrl(twitterUrl)}
+                iconsStyle={iconsStyle}
+            >
                 <AiFillTwitterSquare />
             </Link>
-            <Link href={youtubeUrl} iconsStyle={iconsStyle}>
+            <Link onClick={() => openUrl(youtubeUrl)}
+                iconsStyle={iconsStyle}
+            >
                 <AiFillYoutube />
             </Link>
         </Container>

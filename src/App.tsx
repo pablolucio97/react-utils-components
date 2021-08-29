@@ -113,6 +113,7 @@ const App = () => {
                 }}
                 background='#55ff'
                 displayContent='end'
+                linkedinUrl='https://www.linkedin.com/in/pablo-silva-76b521156/'
             />
             <Footer
                 titleCol1='Sobre'
