@@ -1,5 +1,13 @@
 import NewsletterProps from '../types/NewsletterProps'
-import { Container, TextInput, InfoContainer, ActionContainer, Title, Text, Button } from './styles'
+import {
+    Container,
+    TextInput,
+    InfoContainer,
+    ActionContainer,
+    Title,
+    Text,
+    Button
+} from './styles'
 
 const Newsletter = ({
     buttonStyle,

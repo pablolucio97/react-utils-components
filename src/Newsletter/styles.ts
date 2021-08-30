@@ -68,7 +68,7 @@ export const TextInput = styled.input<NewsletterProps>`
   &:focus{
       box-shadow: ${props => props.showFocusEffect ? 
       //eslint-disable-next-line
-      '0 0 8px 0' + `${palletCollors.secondary}` : 'none'}}
+      '0 0 8px 0' + `${palletCollors.primary}` : 'none'}}
 `;
 
 export const Button = styled.button<NewsletterProps>`
