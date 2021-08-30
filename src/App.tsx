@@ -20,6 +20,7 @@ import {useSectionAndMenuLinkage} from './hooks/useSectionAndMenuLinkage'
 import { ReadBar } from './components/ReadBar'
 import { Newsletter } from './Newsletter'
 import { Title } from './components/Title'
+import { Text } from './components/Text'
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
 //create step indicator
@@ -73,6 +74,9 @@ const App = () => {
             <Title
                 title='sjdfhskdf'
                 renderElement='h3'
+            />
+            <Text
+                text='sdfsdf'
             />
             <Newsletter
                 title='Fique por dentro'
