@@ -10,7 +10,6 @@ import {
 } from 'react-icons/ai'
 import SocialRibbonProps from '../../types/SocialRibbonsProps'
 
-
 export default function SocialRibbon({
     background,
     iconsStyle,

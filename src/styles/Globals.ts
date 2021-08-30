@@ -9,6 +9,14 @@ export const GlobalStyles = createGlobalStyle`
         transition: all .32s ease;
     }
 
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    body{
+        background: #eee;
+    }
+
     button{
         display: flex;
         justify-content: center;
@@ -19,9 +27,6 @@ export const GlobalStyles = createGlobalStyle`
         text-transform: uppercase;
     }
 
-    body{
-        background: #eee;
-    }
 
     a{
         text-decoration: none;

@@ -2,15 +2,9 @@ type HeaderProps = {
     title?: string;
     logoUrl?: string;
     logoSize?: "tiny" | "small" | "medium" | "large";
-    headerSize?: "medium" | "large";
-    headerBackground?: string;
-    showReadbar?: boolean;
+    size?: "medium" | "large";
+    background?: string;
     showSearchBar?:Boolean;
-    readBarbackground?: string;
-    readBargradientBackground?: boolean;
-    readBarType?: 'thick' | 'thin';
-    readBargradientStartColor?: string;
-    readBargradientEndColor?: string;
     displayElements?: 'center' | 'spaced'
   };
   

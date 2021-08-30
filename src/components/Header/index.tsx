@@ -1,25 +1,19 @@
 import HeaderProps from '../../types/HeaderProps'
-import { Container, Link, Logo, Progress, ReadBarContainer, SearchBar, SearchBarContainer, Title, TitleContainer } from './styles'
+import { Container, Link, Logo, SearchBar, SearchBarContainer, Title, TitleContainer } from './styles'
 
 const Header = ({
     title,
-    headerSize,
+    size,
     logoSize,
     logoUrl,
-    showReadbar,
     showSearchBar,
-    readBarType,
-    readBarbackground,
-    readBargradientBackground,
-    readBargradientEndColor,
-    readBargradientStartColor,
-    headerBackground,
+    background,
     displayElements
 }: HeaderProps) => {
     return (
         <Container
-            headerSize={headerSize}
-            headerBackground={headerBackground}
+            size={size}
+            background={background}
             displayElements={displayElements}
         >
             <TitleContainer>
@@ -37,17 +31,6 @@ const Header = ({
                     placeholder='Search'
                 />
             </SearchBarContainer>
-            <ReadBarContainer
-                showReadbar={showReadbar}
-                readBarType={readBarType}
-            >
-                <Progress
-                    readBarbackground={readBarbackground}
-                    readBargradientBackground={readBargradientBackground}
-                    readBargradientEndColor={readBargradientEndColor}
-                    readBargradientStartColor={readBargradientStartColor}
-                />
-            </ReadBarContainer>
         </Container>
     )
 }

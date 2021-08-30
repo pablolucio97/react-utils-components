@@ -1,7 +1,7 @@
+import { useContext } from 'react'
 import { GlobalStyles } from './styles/Globals'
 import { InfoCard } from './components/InfoCard'
 import { Dialog } from './components/Dialog'
-import { ModalContextProvider } from './context/ModalContext'
 import { PrimaryButton } from './components/PrimaryButton'
 import CollapsibleContainer from './components/CollapsibleContainer'
 import { SecondaryButton } from './components/SecondaryButton'
@@ -14,38 +14,70 @@ import { Header } from './components/Header'
 import { palletCollors } from './styles/palletCollors'
 import { Footer } from './components/Footer'
 import SocialRibbon from './components/SocialRibbon'
-
+import { TopMenu } from './components/TopMenu'
+import { Section } from './components/Section'
+import {useSectionAndMenuLinkage} from './hooks/useSectionAndMenuLinkage'
+import { ReadBar } from './components/ReadBar'
+import { Newsletter } from './Newsletter'
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
 //create step indicator
 //create slider image
-//create footer
-//create header
-//create question-form
-
+//fix section scroll and section/topmenu context flow
 
 const App = () => {
 
-    function test(e: FormEvent){
+     function test(e: FormEvent) {
         e.preventDefault()
         console.log('ok')
     }
+    
+    const {firstMenuId, secondMenuId} = useSectionAndMenuLinkage()
+
+    console.log(firstMenuId)
+
+    const menuItems = [
+        {
+            itemUrl: secondMenuId,
+            itemText: 'Facebook',
+        },
+        {
+            itemUrl: 'https://www.linkedin.com/in/pablo-silva-76b521156/',
+            itemText: 'Linkedin',
+        },
+        {
+            itemUrl: firstMenuId,
+            itemText: 'Youtube',
+        },
+    ]
+
 
     return (
-        <ModalContextProvider>
-            <GlobalStyles />
+        <>
+             <GlobalStyles />
             <Header
                 logoSize='large'
                 logoUrl='https://images.unsplash.com/photo-1630046213113-111c5a2772ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
-                showReadbar
-                readBarbackground='red'
-                readBarType='thin'
-                readBargradientBackground
-                readBargradientEndColor={palletCollors.primary}
-                readBargradientStartColor={palletCollors.secondary}
                 title='React Utils Components'
                 showSearchBar
                 displayElements='spaced'
+            />
+            <TopMenu
+                menuList={menuItems}
+            />
+            <ReadBar
+                barType='thick'
+                background='red'
+            />
+            <Newsletter
+                title='Fique por dentro'
+                textInfo='Cadastre-se na nossa newsletter e receba novidades.'
+                buttonlabel='Cadastrar'
+                placeholder='digite seu melhor e-mail'
+                style={{
+                    borderRadius: '8px'
+                }}
+                showFocusEffect
             />
             <InfoCard
                 title='Title'
@@ -91,9 +123,9 @@ const App = () => {
                 postFunction={test}
             />
             <Avatar
-                 urlImg='https://images.unsplash.com/photo-1629878165113-73a6276d25a6?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
-                 size='large'
-                 borderType='thin'
+                urlImg='https://images.unsplash.com/photo-1629878165113-73a6276d25a6?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                size='large'
+                borderType='thin'
             />
             <QuestionForm
                 question='How many is 12 + 34'
@@ -107,9 +139,11 @@ const App = () => {
                 optionC='12'
                 optionD='12'
             />
+            <Section firstMenuId={firstMenuId} />
+            <Section firstMenuId={secondMenuId} />
             <SocialRibbon
                 iconsStyle={{
-                    iconsSize:'tiny'
+                    iconsSize: 'tiny'
                 }}
                 background='#55ff'
                 displayContent='end'
@@ -148,8 +182,8 @@ const App = () => {
                 text5Col5='GoToCode'
                 extraDataText='lorem isdfhskjdhfksjdfhgshkdfgsdjkhgfsdjhkfgsdfjkhsgdfjkshdfgs'
                 showExtraData
-            />
-        </ModalContextProvider>
+            /> 
+        </>
     )
 }
 
