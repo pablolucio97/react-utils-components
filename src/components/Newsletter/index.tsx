@@ -1,4 +1,4 @@
-import NewsletterProps from '../types/NewsletterProps'
+import NewsletterProps from '../../types/NewsletterProps'
 import {
     Container,
     TextInput,

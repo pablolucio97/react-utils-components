@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { MdExpandMore, MdExpandLess } from 'react-icons/md'
-import { Container, Title, Content, ButtonCollapse } from './styles'
+import { MdExpandMore } from 'react-icons/md'
+import { Container, Title, Content, ButtonCollapse, SubContainer } from './styles'
 
 import CollapsibleContainerProps from '../../types/CollapsibleContainerProps'
 
@@ -10,23 +10,21 @@ const CollapsibleContainer = ({ title, content, currentExpanded, onExpand }: Col
 
     function toggleExpands() {
         setIsExpanded(!isExpanded)
+        console.log(isExpanded)
     }
 
     return (
-        <Container >
-            <Title>{title}</Title>
-            <Content
-                className={isExpanded ? 'expandCard' : ''}
-            >
-                {content}
-            </Content>
-            <ButtonCollapse onClick={toggleExpands}>
-                {isExpanded ?
+        <Container>
+            <SubContainer className={isExpanded ? '' : 'expandContainer'} >
+                <Title>{title}</Title>
+                <Content className={isExpanded ? 'showContent' : ''}
+                >
+                    {content}
+                </Content>
+                <ButtonCollapse onClick={toggleExpands} className={isExpanded ? '' : 'changeArrowOrientation'}>
                     <MdExpandMore size={24} />
-                    :
-                    <MdExpandLess size={24} />
-                }
-            </ButtonCollapse>
+                </ButtonCollapse>
+            </SubContainer>
         </Container>
     );
 }

@@ -18,9 +18,11 @@ import { TopMenu } from './components/TopMenu'
 import { Section } from './components/Section'
 import {useSectionAndMenuLinkage} from './hooks/useSectionAndMenuLinkage'
 import { ReadBar } from './components/ReadBar'
-import { Newsletter } from './Newsletter'
+import { Newsletter } from './components/Newsletter'
 import { Title } from './components/Title'
 import { Text } from './components/Text'
+import {useDialog} from './hooks/useDialogState'
+import { CarouselImage } from './components/CarouselImage'
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
 //create step indicator
@@ -29,9 +31,16 @@ import { Text } from './components/Text'
 
 const App = () => {
 
+    const {setDialogOpened, dialogOpened} = useDialog()
+
      function test(e: FormEvent) {
         e.preventDefault()
         console.log('ok')
+    }
+
+    function triggerDialog(){
+        setDialogOpened(true)
+        console.log(dialogOpened)
     }
     
     const {firstMenuId, secondMenuId} = useSectionAndMenuLinkage()
@@ -71,6 +80,8 @@ const App = () => {
                 barType='thick'
                 background='red'
             />
+            <CarouselImage
+            />
             <Title
                 title='sjdfhskdf'
                 renderElement='h3'
@@ -102,6 +113,7 @@ const App = () => {
                 label='click'
                 showPressedEffect
                 buttonStyle='solid'
+                action={triggerDialog}
             />
             <SecondaryButton
                 label='click'

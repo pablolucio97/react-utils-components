@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ModalContext } from "../context/ModalContext";
+import { DialogContext } from "../context/DialogContext";
 
 export function useDialog(){
-  return useContext(ModalContext);
+  return useContext(DialogContext);
 };

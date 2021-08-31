@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { palletCollors } from "../styles/palletCollors";
-import NewsletterProps from "../types/NewsletterProps";
+import { palletCollors } from "../../styles/palletCollors";
+import NewsletterProps from "../../types/NewsletterProps";
 
 export const Container = styled.menu`
   display: flex;

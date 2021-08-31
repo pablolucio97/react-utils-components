@@ -6,6 +6,7 @@ type SecondaryButtonProps = {
     }
     showPressedEffect?: boolean;
     buttonStyle?: 'solid' | 'outline'
+    action?: () => void;
 
 }
 

@@ -6,15 +6,15 @@ type ChildrenProps = {
     children: ReactNode;
 }
 
-export const ModalContext = createContext({} as DialogStateProps)
+export const DialogContext = createContext({} as DialogStateProps)
 
-export const ModalContextProvider = ({ children } : ChildrenProps) => {
+export const DialogContextProvider = ({ children } : ChildrenProps) => {
 
     const [dialogOpened, setDialogOpened] = useState<boolean>(true)
 
     return (
-        <ModalContext.Provider value={{ dialogOpened, setDialogOpened }}>
+        <DialogContext.Provider value={{ dialogOpened, setDialogOpened }}>
             {children}
-        </ModalContext.Provider>
+        </DialogContext.Provider>
     )
 }

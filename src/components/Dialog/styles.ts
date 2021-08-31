@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { palletCollors } from "../../styles/palletCollors";
 import DialogProps from "../../types/DialogProps";
 
+
 export const Container = styled.div<DialogProps>`
   display: flex;
   flex-direction: column;
@@ -14,6 +15,9 @@ export const Container = styled.div<DialogProps>`
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
   background: ${(props) => props.style?.background || palletCollors.white};
   border-radius: ${(props) => props.style?.borderRadius || "4px"};
+  &.activeDialog{
+    transform: translateY(-1000%);
+}
 `;
 
 export const TitleContainer = styled.div`

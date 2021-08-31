@@ -1,4 +1,5 @@
 import DialogProps from '../../types/DialogProps'
+import { useDialog } from '../../hooks/useDialogState'
 import {
     Container,
     Title,
@@ -12,32 +13,29 @@ import {
 } from './styles'
 import { MdClose } from 'react-icons/md'
 
-import { ModalContextProvider } from '../../context/ModalContext'
-import { useState } from 'react'
+import { DialogContextProvider } from '../../context/DialogContext'
 
 
 const Dialog = ({ content, title }: DialogProps) => {
 
-    const [isOpenedDialog, setIsOpenedDialog] = useState(false)
+    const { dialogOpened, setDialogOpened } = useDialog()
+
+    console.log(dialogOpened)
 
     function closeDialog() {
-        setIsOpenedDialog(false)
-        console.log('closed dialog')
-        console.log(isOpenedDialog)
+        setDialogOpened(false)
     }
 
     function openDialog() {
-        setIsOpenedDialog(true)
-        console.log('opend dialog')
-        console.log(isOpenedDialog)
+        setDialogOpened(true)
     }
 
 
 
     return (
-        <ModalContextProvider>
+        <DialogContextProvider>
             <Container className={
-                isOpenedDialog? '' : 'hideDialog'
+                dialogOpened ? '' : 'activeDialog'
             }>
                 <TitleContainer>
                     <Title>{title}</Title>
@@ -49,11 +47,11 @@ const Dialog = ({ content, title }: DialogProps) => {
                     <Content>{content}</Content>
                 </ContentContainer>
                 <ActionsContainer>
-                    <ConfirmButton onClick={openDialog}>OK</ConfirmButton>
+                    <ConfirmButton onClick={closeDialog}>OK</ConfirmButton>
                     <CancelButton onClick={closeDialog}>Cancelar</CancelButton>
                 </ActionsContainer>
             </Container>
-        </ModalContextProvider>
+        </DialogContextProvider>
     )
 }
 
