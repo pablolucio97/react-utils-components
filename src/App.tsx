@@ -25,6 +25,7 @@ import { useDialog } from './hooks/useDialogState'
 import { CarouselImage } from './components/CarouselImage'
 import { UserCard } from './components/UserCard'
 import { ImageCard } from './components/ImageCard'
+import { ProductCard } from './components/ProductCard'
 //do progressbarread works
 //create functionalities to dialog -- fix dialog context
 //create step indicator
@@ -87,6 +88,13 @@ const App = () => {
                 title='Travel here'
                 content='Travel with the best travel agency in the world! Consult our price in our website.'
                 size='large'
+            />
+            <ProductCard
+                imgUrl='https://images-americanas.b2w.io/produtos/01/00/img/134511/8/134511869_1SZ.jpg'
+                title='TV SEMPTOSHIBA 32"'
+                price='R$1233,90 à vista'
+                priceOnCard='ou 12 x 103,99 sem juros'
+                size='small'
             />
             <Section menuId='2'
                 sectionStyle={{

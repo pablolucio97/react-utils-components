@@ -1,24 +1,14 @@
 import styled from "styled-components";
 import { palletCollors } from "../../styles/palletCollors";
-import ImageCardProps from "../../types/ImageCardProps";
+import ProductCardProps from "../../types/ProductCardProps";
 
-export const Container = styled.div<ImageCardProps>`
+export const Container = styled.div<ProductCardProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: ${(props) =>
-    props.size === "small"
-      ? "240px"
-      : props.size === "medium"
-      ? "320px"
-      : "400px"};
-  height: ${(props) =>
-    props.size === "small"
-      ? "320px"
-      : props.size === "medium"
-      ? "400px "
-      : "400px"};
+  width: 272px;
+  height: 400px;
   padding: 0.8rem;
   margin: 1.6rem;
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
@@ -33,15 +23,30 @@ export const Container = styled.div<ImageCardProps>`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   font-weight: 500;
-  margin: -.92rem auto .4rem;
+  margin: 0.2rem;
+  font-size: 0.92rem;
+  word-break: break-all;
 `;
 
-export const SubTitle = styled.h2`
+export const Description = styled.span`
   font-weight: 500;
-  margin: .24rem;
+  margin: 0.24rem;
+  color: ${palletCollors.lightGray2};
+`;
+
+export const Price = styled.span`
+  font-weight: 500;
+  margin: 0.24rem;
   color: ${palletCollors.black2};
+`;
+
+export const CardPrice = styled.span`
+  font-weight: 400;
+  margin: 0.24rem;
+  font-size: .88rem;
+  color: ${palletCollors.lightGray2};
 `;
 
 export const Content = styled.p`
@@ -50,12 +55,21 @@ export const Content = styled.p`
   width: 92%;
   font-size: 0.88rem;
   font-weight: 400;
- word-break: break-all;
+  word-break: break-all;
   text-overflow: hidden;
 `;
 
+export const TitleContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid ${palletCollors.lightGray3};
+`;
 
-export const ContentContainer = styled.div`
+export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,12 +77,12 @@ export const ContentContainer = styled.div`
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: .24rem;
+  padding: 0.4rem;
 `;
 
-export const ImgContainer = styled.div<ImageCardProps>`
-  width: 100%;
-  height: 224px;
+export const ImgContainer = styled.div<ProductCardProps>`
+  width: 160px;
+  height: 160px;
 `;
 
 export const Img = styled.img`
