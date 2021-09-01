@@ -1,4 +1,4 @@
-import { Container, ImageContainer, Img } from "./styles"
+import * as Styled from "./styles"
 import CarouselImageProps from '../../types/CarouselImageProps'
 
 export const CarouselImage = ({
@@ -9,14 +9,14 @@ export const CarouselImage = ({
     img5Url
 }: CarouselImageProps) => {
     return (
-        <Container>
-            <ImageContainer>
-                <Img src={img1Url} />
-                <Img src={img2Url} />
-                <Img src={img3Url} />
-                <Img src={img4Url} />
-                <Img src={img5Url} />
-            </ImageContainer>
-        </Container>
+        <Styled.Container>
+            <Styled.ImageContainer>
+                <Styled.Img src={img1Url} />
+                <Styled.Img src={img2Url} />
+                <Styled.Img src={img3Url} />
+                <Styled.Img src={img4Url} />
+                <Styled.Img src={img5Url} />
+            </Styled.ImageContainer>
+        </Styled.Container>
     )
 }

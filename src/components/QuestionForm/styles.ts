@@ -4,7 +4,7 @@ import { palletCollors } from "../../styles/palletCollors";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 1040px;
   background: ${palletCollors.white};
   padding: 1rem;
   margin: 1rem auto;
@@ -46,4 +46,7 @@ export const OptionLabel = styled.label`
   margin: -.48rem .48rem;
 `
 
-
+export const ChildrenContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;

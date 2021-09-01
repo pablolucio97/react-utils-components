@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { palletCollors } from "../../styles/palletCollors";
-import InfoCardProps from "../../types/InfoCardProps";
+import ImageCardProps from "../../types/ImageCardProps";
 
-export const Container = styled.div<InfoCardProps>`
+export const Container = styled.div<ImageCardProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,14 +33,14 @@ export const Container = styled.div<InfoCardProps>`
   }
 `;
 
-export const Title = styled.h1`
-  font-weight: 600;
-  margin: 0.24rem;
+export const Title = styled.h2`
+  font-weight: 500;
+  margin: -.92rem auto .4rem;
 `;
 
 export const SubTitle = styled.h2`
   font-weight: 500;
-  margin:  0.24rem;
+  margin: .24rem;
   color: ${palletCollors.black2};
 `;
 
@@ -51,24 +51,28 @@ export const Content = styled.p`
   font-size: 0.88rem;
   font-weight: 400;
   word-wrap: break-word;
+  text-overflow: hidden;
 `;
 
-export const TitleContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: .4rem;
-  border-bottom: 1px solid ${palletCollors.lightGray3};
-`;
 
 export const ContentContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: .4rem;
+  padding: .24rem;
+`;
+
+export const ImgContainer = styled.div<ImageCardProps>`
+  width: 100%;
+  height: 224px;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

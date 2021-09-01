@@ -17,6 +17,7 @@ type NewsletterProps = {
         borderRadius?: string;
     };
     showFocusEffect?: boolean;
+    alignContent?: 'start' | 'center' | 'end';
 }
 
 export default NewsletterProps

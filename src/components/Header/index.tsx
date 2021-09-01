@@ -1,5 +1,5 @@
 import HeaderProps from '../../types/HeaderProps'
-import { Container, Link, Logo, SearchBar, SearchBarContainer, Title, TitleContainer } from './styles'
+import * as Styled from './styles'
 
 const Header = ({
     title,
@@ -11,27 +11,27 @@ const Header = ({
     displayElements
 }: HeaderProps) => {
     return (
-        <Container
+        <Styled.Container
             size={size}
             background={background}
             displayElements={displayElements}
         >
-            <TitleContainer>
-                <Link>
-                    <Logo
+            <Styled.TitleContainer>
+                <Styled.Link>
+                    <Styled.Logo
                         logoSize={logoSize}
                         src={logoUrl}
                     />
-                </Link>
-                <Title>{title}</Title>
-            </TitleContainer>
-            <SearchBarContainer>
-                <SearchBar
+                </Styled.Link>
+                <Styled.Title>{title}</Styled.Title>
+            </Styled.TitleContainer>
+            <Styled.SearchBarContainer>
+                <Styled.SearchBar
                     showSearchBar={showSearchBar}
                     placeholder='Search'
                 />
-            </SearchBarContainer>
-        </Container>
+            </Styled.SearchBarContainer>
+        </Styled.Container>
     )
 }
 

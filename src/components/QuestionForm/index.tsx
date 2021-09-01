@@ -1,14 +1,6 @@
 
 import QuestionFormProps from '../../types/QuestionFormProps'
-import {
-    Container,
-    OptionCheck,
-    OptionLabel,
-    OptionsContainer,
-    Question,
-    QuestionContainer,
-    OptionContainer
-} from './styles'
+import * as Styled from './styles'
 
 const QuestionForm = ({
     formName,
@@ -22,33 +14,37 @@ const QuestionForm = ({
     idOptionB,
     idOptionC,
     idOptionD,
-    idOptionE
+    idOptionE,
+    children
 
 }: QuestionFormProps) => {
     return (
-        <Container>
-            <QuestionContainer>
-                <Question>{question}</Question>
-            </QuestionContainer>
-            <OptionsContainer>
-                <OptionContainer>
-                    <OptionCheck type='radio' id={idOptionA} value={idOptionA} name={formName} />
-                    <OptionLabel htmlFor={idOptionA}>{optionA}</OptionLabel>
-                </OptionContainer>
-                <OptionContainer>
-                    <OptionCheck type='radio' id={idOptionB} value={idOptionB} name={formName} />
-                    <OptionLabel htmlFor={idOptionB}>{optionB}</OptionLabel>
-                </OptionContainer>
-                <OptionContainer>
-                    <OptionCheck type='radio' id={idOptionC} value={idOptionC} name={formName} />
-                    <OptionLabel htmlFor={idOptionC}>{optionC}</OptionLabel>
-                </OptionContainer>
-                <OptionContainer>
-                    <OptionCheck type='radio' id={idOptionD} value={idOptionD} name={formName} />
-                    <OptionLabel htmlFor={idOptionD}>{optionD}</OptionLabel>
-                </OptionContainer>
-            </OptionsContainer>
-        </Container>
+        <Styled.Container>
+            <Styled.QuestionContainer>
+                <Styled.Question>{question}</Styled.Question>
+            </Styled.QuestionContainer>
+            <Styled.OptionsContainer>
+                <Styled.OptionContainer>
+                    <Styled.OptionCheck type='radio' id={idOptionA} value={idOptionA} name={formName} />
+                    <Styled.OptionLabel htmlFor={idOptionA}>{optionA}</Styled.OptionLabel>
+                </Styled.OptionContainer>
+                <Styled.OptionContainer>
+                    <Styled.OptionCheck type='radio' id={idOptionB} value={idOptionB} name={formName} />
+                    <Styled.OptionLabel htmlFor={idOptionB}>{optionB}</Styled.OptionLabel>
+                </Styled.OptionContainer>
+                <Styled.OptionContainer>
+                    <Styled.OptionCheck type='radio' id={idOptionC} value={idOptionC} name={formName} />
+                    <Styled.OptionLabel htmlFor={idOptionC}>{optionC}</Styled.OptionLabel>
+                </Styled.OptionContainer>
+                <Styled.OptionContainer>
+                    <Styled.OptionCheck type='radio' id={idOptionD} value={idOptionD} name={formName} />
+                    <Styled.OptionLabel htmlFor={idOptionD}>{optionD}</Styled.OptionLabel>
+                </Styled.OptionContainer>
+            </Styled.OptionsContainer>
+            <Styled.ChildrenContainer>
+                {children}
+            </Styled.ChildrenContainer>
+        </Styled.Container>
     )
 }
 

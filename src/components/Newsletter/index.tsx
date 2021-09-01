@@ -1,13 +1,5 @@
 import NewsletterProps from '../../types/NewsletterProps'
-import {
-    Container,
-    TextInput,
-    InfoContainer,
-    ActionContainer,
-    Title,
-    Text,
-    Button
-} from './styles'
+import * as Styled from './styles'
 
 const Newsletter = ({
     buttonStyle,
@@ -17,29 +9,30 @@ const Newsletter = ({
     title,
     buttonlabel,
     placeholder,
-    showFocusEffect
+    showFocusEffect,
+    alignContent
 }: NewsletterProps) => {
     return (
-        <Container
+        <Styled.Container
             style={style}
         >
-            <InfoContainer>
-                <Title>{title}</Title>
-                <Text>{textInfo}</Text>
-            </InfoContainer>
-            <ActionContainer>
-                <TextInput
+            <Styled.InfoContainer alignContent={alignContent}>
+                <Styled.Title>{title}</Styled.Title>
+                <Styled.Text>{textInfo}</Styled.Text>
+            </Styled.InfoContainer>
+            <Styled.ActionContainer alignContent={alignContent}>
+                <Styled.TextInput
                     inputStyle={inputStyle}
                     placeholder={placeholder}
                     showFocusEffect={showFocusEffect}
                 />
-                <Button
+                <Styled.Button
                     buttonStyle={buttonStyle}
                 >
                     {buttonlabel}
-                </Button>
-            </ActionContainer>
-        </Container>
+                </Styled.Button>
+            </Styled.ActionContainer>
+        </Styled.Container>
     )
 }
 

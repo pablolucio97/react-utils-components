@@ -1,5 +1,5 @@
 import AvatarProps from "../../types/AvatarProps"
-import { Container, Img } from './styles'
+import * as Styled from './styles'
 
 const Avatar = ({
     size,
@@ -8,11 +8,11 @@ const Avatar = ({
     borderType
 }: AvatarProps) => {
     return (
-        <Container size={size} borderColor={borderColor}  borderType={borderType}>
-            <Img
+        <Styled.Container size={size} borderColor={borderColor}  borderType={borderType}>
+            <Styled.Img
                 src={urlImg}
             />
-        </Container>
+        </Styled.Container>
     )
 }
 

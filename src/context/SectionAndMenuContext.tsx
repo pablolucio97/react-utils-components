@@ -10,33 +10,11 @@ type ChildrenProps = {
 
 export const SectionAndMenuContextProvider = ({ children }: ChildrenProps) => {
 
-    const firstMenuId = '#1'
-    const secondMenuId = '#2'
-    const thirdMenuId = '#3'
-    const fourthMenuId = '#4'
-    const fivethMenuId = '#5'
-    const sixthMenuId = '#6'
-    const seventhMenuId = '#7'
-    const eighthMenuId = '#8'
-    const ninethMenuId = '#9'
-    const tenthMenuId = '#10'
-    const eleventhMenuId = '#11'
-    const twelfthMenuId = '#12'
-    
+    const menuId = '#1'
+   
     return (
         <SectionAndMenuContext.Provider value={{
-            firstMenuId,
-            secondMenuId,
-            thirdMenuId,
-            fourthMenuId,
-            fivethMenuId,
-            sixthMenuId,
-            seventhMenuId,
-            eighthMenuId,
-            ninethMenuId,
-            tenthMenuId,
-            eleventhMenuId,
-            twelfthMenuId
+            menuId
  }}>
             {children}
         </SectionAndMenuContext.Provider>

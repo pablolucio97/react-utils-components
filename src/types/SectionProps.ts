@@ -1,16 +1,12 @@
+import { ReactNode } from "react";
 type SectionProps = {
-    firstMenuId?: string;
-    secondMenuId?: string;
-    thirdMenuId?: string;
-    fourthMenuId?: string;
-    fivethMenuId?: string;
-    sixthMenuId?: string;
-    seventhMenuId?: string;
-    eighthMenuId?: string;
-    ninethMenuId?: string;
-    tenthMenuId?: string;
-    eleventhMenuId?: string;
-    twelfthMenuId?: string;
-}
+  menuId?: string;
+  title?: string;
+  children?: ReactNode;
+  sectionStyle?:{
+      background?: string;
+  }
+  contentOrientation?:  'horizontal' | 'vertical'
+};
 
-export default SectionProps
+export default SectionProps;

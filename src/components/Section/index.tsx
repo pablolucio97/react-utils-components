@@ -1,12 +1,31 @@
 import SectionProps from '../../types/SectionProps'
-import {SectionContainer} from './styles'
+import * as Styled from './styles'
 
-export default function Section({firstMenuId} : SectionProps) {
+export default function Section({
+    menuId,
+    title,
+    sectionStyle,
+    children,
+    contentOrientation
+}: SectionProps) {
     return (
-        <SectionContainer id={firstMenuId}>
-            <p>Hello from section</p>
-        </SectionContainer>
+        <Styled.SectionContainer
+            id={menuId}
+            sectionStyle={sectionStyle}
+
+        >
+            <Styled.TitleContainer>
+                <Styled.Title>
+                    {title}
+                </Styled.Title>
+            </Styled.TitleContainer>
+            <Styled.ContentContainer
+                contentOrientation={contentOrientation}
+            >
+                {children}
+            </Styled.ContentContainer>
+        </Styled.SectionContainer>
     )
 }
 
-export {Section}
+export { Section }

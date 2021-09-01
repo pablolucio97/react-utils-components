@@ -1,16 +1,16 @@
 
 import InputProps from '../../types/InputProps';
-import { TextInput, Container, Label } from './styles';
+import * as Styled from './styles';
 
 const Input = ({label, placeholder, style} : InputProps) => {
     return (
-        <Container>
-            <Label>{label}</Label>
-            <TextInput
+        <Styled.Container>
+            <Styled.Label>{label}</Styled.Label>
+            <Styled.TextInput
             placeholder={placeholder}
             style={style}
             />
-        </Container>
+        </Styled.Container>
     )
         ;
 }

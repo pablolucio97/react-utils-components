@@ -1,16 +1,16 @@
 import {ReactNode} from 'react'
 
-type InfoCardProps = {
+type ImageCardProps = {
     title?: string;
-    subtitle? :string;
     content?: string;
+    size?: 'small' | 'medium' | 'large';
     style?: {
         background?: string;
         borderRadius?: string;
     }
     animationOnHover?: boolean;
-    size: 'small' | 'medium' | 'large';
+    imgUrl?: string;
     children?: ReactNode;
 }
 
-export default InfoCardProps
+export default ImageCardProps

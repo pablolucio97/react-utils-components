@@ -1,16 +1,29 @@
-import InfoCardProps from "../../types/InfoCardProps"
+import UserCardProps from "../../types/UserCardProps"
 import * as Styled from './styles'
 
-const InfoCard = ({ title, content, subtitle, style, animationOnHover, children, size }: InfoCardProps) => {
+const UserCard = ({
+    title,
+    content,
+    subtitle,
+    style,
+    animationOnHover,
+    children,
+    size,
+    imgSize,
+    imgUrl
+}: UserCardProps) => {
     return (
         <Styled.Container
             style={{
-                background:style?.background,
+                background: style?.background,
                 borderRadius: style?.borderRadius
             }}
             animationOnHover={animationOnHover}
             size={size}
         >
+            <Styled.ImgContainer imgSize={imgSize}>
+                <Styled.Img src={imgUrl} />
+            </Styled.ImgContainer>
             <Styled.TitleContainer>
                 <Styled.Title>{title}</Styled.Title>
                 <Styled.SubTitle>{subtitle}</Styled.SubTitle>
@@ -23,4 +36,4 @@ const InfoCard = ({ title, content, subtitle, style, animationOnHover, children,
     )
 }
 
-export { InfoCard }
+export { UserCard }

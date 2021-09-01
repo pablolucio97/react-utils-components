@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 type QuestionFormProps = {
     question: string;
     formName: string;
@@ -11,6 +13,7 @@ type QuestionFormProps = {
     idOptionC: string;
     idOptionD: string;
     idOptionE?: string;
+    children?: ReactNode
 }
 
 export default QuestionFormProps

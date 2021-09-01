@@ -5,25 +5,37 @@ import NewsletterProps from "../../types/NewsletterProps";
 export const Container = styled.menu`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 1040px;
   background: ${palletCollors.white};
   color: ${palletCollors.white};
 
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
-  margin: 0.8rem;
+  margin: 0.8rem auto;
   padding: 0.8rem;
 `;
 
-export const InfoContainer = styled.menu`
+export const InfoContainer = styled.menu<NewsletterProps>`
   display: flex;
   flex-direction: column;
-  width: 320px;
+  align-items: ${(props) =>
+    props.alignContent === "start"
+      ? "flex-start"
+      : props.alignContent === "end"
+      ? "flex-end"
+      : "center"};
+  width: 100%;
 `;
 
-export const ActionContainer = styled.menu`
+export const ActionContainer = styled.menu<NewsletterProps>`
   display: flex;
   align-items: center;
+  justify-content: ${(props) =>
+      props.alignContent === "start"
+      ? "flex-start"
+      : props.alignContent === "end"
+      ? "flex-end"
+      : "center"};
   width: 100%;
   color: ${palletCollors.white};
   padding: 0.4rem;
@@ -38,7 +50,7 @@ export const Title = styled.h2`
 export const Text = styled.span`
   font-weight: 400;
   margin: 0.4rem;
-  font-size: .92rem;
+  font-size: 0.92rem;
   color: ${palletCollors.black3};
 `;
 
@@ -55,7 +67,7 @@ export const TextInput = styled.input<NewsletterProps>`
   padding: 0.4rem;
   outline: none;
   font-size: 0.92rem;
-  transition: all .32s ease;
+  transition: all 0.32s ease;
 
   &::placeholder {
     color: ${palletCollors.lightGray3};
@@ -65,10 +77,13 @@ export const TextInput = styled.input<NewsletterProps>`
     color: transparent;
   }
 
-  &:focus{
-      box-shadow: ${props => props.showFocusEffect ? 
-      //eslint-disable-next-line
-      '0 0 8px 0' + `${palletCollors.primary}` : 'none'}}
+  &:focus {
+    box-shadow: ${(props) =>
+      props.showFocusEffect
+        ? //eslint-disable-next-line
+          "0 0 8px 0" + `${palletCollors.primary}`
+        : "none"};
+  }
 `;
 
 export const Button = styled.button<NewsletterProps>`
@@ -80,7 +95,8 @@ export const Button = styled.button<NewsletterProps>`
       : palletCollors.primary};
   font-weight: bold;
   border-radius: 4px;
-  color: ${(props) => props.buttonStyle?.color?  props.buttonStyle?.color : palletCollors.white };
+  color: ${(props) =>
+    props.buttonStyle?.color ? props.buttonStyle?.color : palletCollors.white};
   border: 1px solid ${(props) => props.style?.background};
   transition: all 0.32s ease;
   padding: 0.8rem;

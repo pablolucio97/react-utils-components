@@ -1,13 +1,5 @@
 import FormProps from '../../types/FormProps';
-import {
-    TextInput,
-    InputContainer,
-    Label,
-    Container,
-    Title,
-    TitleContainer,
-    PostButton
-} from './styles';
+import * as Styled from './styles';
 
 const Form = ({
     postFunction,
@@ -21,36 +13,36 @@ const Form = ({
     formTitle
 }: FormProps) => {
     return (
-        <Container onSubmit={postFunction}>
-            <TitleContainer>
-                <Title>{formTitle}</Title>
-            </TitleContainer>
-            <InputContainer>
-                <Label>{nameLabel}</Label>
-                <TextInput
+        <Styled.Container onSubmit={postFunction}>
+            <Styled.TitleContainer>
+                <Styled.Title>{formTitle}</Styled.Title>
+            </Styled.TitleContainer>
+            <Styled.InputContainer>
+                <Styled.Label>{nameLabel}</Styled.Label>
+                <Styled.TextInput
                     placeholder={namePlaceholder}
                     required
                     type='text'
                 />
-            </InputContainer>
-            <InputContainer>
-                <Label>{emailLabel}</Label>
-                <TextInput
+            </Styled.InputContainer>
+            <Styled.InputContainer>
+                <Styled.Label>{emailLabel}</Styled.Label>
+                <Styled.TextInput
                     placeholder={emailPlaceholder}
                     required
                     type='email'
                 />
-            </InputContainer>
-            <InputContainer>
-                <Label>{passwordLabel}</Label>
-                <TextInput
+            </Styled.InputContainer>
+            <Styled.InputContainer>
+                <Styled.Label>{passwordLabel}</Styled.Label>
+                <Styled.TextInput
                     placeholder={passwordPlaceholder}
                     required
                     type='password'
                 />
-            </InputContainer>
-            <PostButton type='submit' buttonStyle={buttonStyle}>Register</PostButton>
-        </Container>
+            </Styled.InputContainer>
+            <Styled.PostButton type='submit' buttonStyle={buttonStyle}>Register</Styled.PostButton>
+        </Styled.Container>
     )
         ;
 }

@@ -8,11 +8,13 @@ export const Container = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 1040px;
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
   background: ${palletCollors.white};
   margin: 0.8rem;
+  border-radius: 4px;
+  padding: .8rem;
 `;
 
 export const TitleContainer = styled.div`
@@ -92,14 +94,16 @@ export const PostButton = styled.button<FormProps>`
   border: 1px solid ${(props) => props.style?.background};
   transition: all 0.32s ease;
   padding: 0.8rem;
-  margin: 0.8rem auto 0.8rem;
-  outline: none;
+  margin: 0.4rem;
 
-  &:focus {
-    border: 2px solid
-      ${(props) =>
-        props.style?.borderColor
-          ? props.style.borderColor
-          : palletCollors.primary};
+  &:hover {
+    background: ${(props) =>
+      props.buttonStyle === "outline"
+        ? palletCollors.primary
+        : palletCollors.white};
+    color: ${(props) =>
+      props.buttonStyle === "outline"
+        ? palletCollors.white
+        : palletCollors.primary};
   }
 `;

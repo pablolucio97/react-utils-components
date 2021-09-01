@@ -9,13 +9,17 @@ export const Container = styled.div`
   }
 
   & .expandContainer {
-    padding-bottom: .8rem;
+    padding: 1.2rem 0.4rem;
     box-shadow: 0 0 8px ${palletCollors.primary}
   }
 
 
+  & .slideButtom{
+    transform: rotateX(180deg);
+  }
+
   & .changeArrowOrientation{
-    transform: rotateX(180deg)
+    transform: rotateZ(180deg);
   }
 `;
 
@@ -26,9 +30,10 @@ export const SubContainer = styled.div`
   align-items: flex-start;
   position: relative;
   background: ${palletCollors.white};
-  width: 720px;
+  width: 1040px;
   border-radius: 4px;
   margin: 0.8rem;
+  padding: .8rem 0.4rem;
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
 `

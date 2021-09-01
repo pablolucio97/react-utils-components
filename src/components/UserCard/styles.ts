@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { palletCollors } from "../../styles/palletCollors";
-import InfoCardProps from "../../types/InfoCardProps";
+import UserCardProps from "../../types/UserCardProps";
 
-export const Container = styled.div<InfoCardProps>`
+export const Container = styled.div<UserCardProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,12 +35,12 @@ export const Container = styled.div<InfoCardProps>`
 
 export const Title = styled.h1`
   font-weight: 600;
-  margin: 0.24rem;
+  margin: 0.2rem;
 `;
 
 export const SubTitle = styled.h2`
   font-weight: 500;
-  margin:  0.24rem;
+  margin: .24rem;
   color: ${palletCollors.black2};
 `;
 
@@ -51,6 +51,7 @@ export const Content = styled.p`
   font-size: 0.88rem;
   font-weight: 400;
   word-wrap: break-word;
+  text-overflow: hidden;
 `;
 
 export const TitleContainer = styled.div`
@@ -59,7 +60,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: .4rem;
+  padding: 1rem;
   border-bottom: 1px solid ${palletCollors.lightGray3};
 `;
 
@@ -71,4 +72,40 @@ export const ContentContainer = styled.div`
   height: 100%;
   text-align: center;
   padding: .4rem;
+`;
+
+export const ImgContainer = styled.div<UserCardProps>`
+  width: ${(props) =>
+    props.imgSize === "tiny"
+      ? "40px"
+      : props.imgSize === "small"
+      ? "56px"
+      : props.imgSize === "medium"
+      ? "72px "
+      : "94px"};
+  height: ${(props) =>
+    props.imgSize === "tiny"
+      ? "40px"
+      : props.imgSize === "small"
+      ? "56px"
+      : props.imgSize === "medium"
+      ? "72px "
+      : "94px"};
+  margin: 0.24rem;
+  border-color: ${(props) => props.style?.borderColor || palletCollors.primary};
+  border-width: ${(props) =>
+    props.style?.borderColor === "thick"
+      ? "4px"
+      : props.style?.borderColor === "thin"
+      ? "2px"
+      : "0"};
+  border-style: solid;
+  border-radius: 50%;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 `;
