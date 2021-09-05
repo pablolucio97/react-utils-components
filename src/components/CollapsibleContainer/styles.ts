@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { palletCollors } from "../../styles/palletCollors";
 import CollapsibleContainerProps from "../../types/CollapsibleContainerProps";
 
-export const Container = styled.div`
+export const Container = styled.div<CollapsibleContainerProps>`
   transition: all .32s ease all;
   & .showContent {
     display: none;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   & .expandContainer {
     padding: 1.2rem 0.4rem;
-    box-shadow: 0 0 8px ${palletCollors.primary}
+    box-shadow: ${props => props.effectColorOnExpand&&  `0 0 8px ${props.effectColorOnExpand}`};
   }
 
 

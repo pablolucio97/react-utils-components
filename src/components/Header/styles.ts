@@ -4,8 +4,9 @@ import HeaderProps from "../../types/HeaderProps";
 
 export const Container = styled.header<HeaderProps>`
   display: flex;
-  position: relative;
+  position: ${props => props.fixHeader? 'fixed' : 'relative'};
   align-items: center;
+  z-index: 10;
   justify-content: ${props => props.displayElements === 'center' ? 'center' : 'space-between'};
   width: 100vw;
   height: 64px;
@@ -31,21 +32,19 @@ export const Logo = styled.img<HeaderProps>`
       ? "40px "
       : "48px"};
   object-fit: cover;
-  margin: 0.4rem;
+  margin: 0.8rem 0;
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
-  position: relative;
   align-items: center;
-  margin: 0 .8rem 0 2.4rem;
+  margin: .64rem .8rem 0 2.4rem;
 `;
 
 export const SearchBarContainer = styled.div`
   display: flex;
-  position: relative;
   align-items: center;
-  margin: 0 2.4rem 0 .8rem;
+  margin: 0 2.4rem 0 .4rem;
 `;
 
 export const Link = styled.a``;
@@ -53,6 +52,7 @@ export const Link = styled.a``;
 export const Title = styled.h1`
   font-weight: 600;
   margin: 0.4rem;
+  font-size: 1.6rem;
   color: ${palletCollors.white};
 `;
 

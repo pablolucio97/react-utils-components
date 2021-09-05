@@ -33,12 +33,12 @@ export const Container = styled.div<UserCardProps>`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-weight: 600;
   margin: 0.2rem;
 `;
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled.h3`
   font-weight: 500;
   margin: .24rem;
   color: ${palletCollors.black2};
@@ -50,7 +50,7 @@ export const Content = styled.p`
   width: 92%;
   font-size: 0.88rem;
   font-weight: 400;
- word-break: break-all;
+  word-break: break-word;
   text-overflow: hidden;
 `;
 

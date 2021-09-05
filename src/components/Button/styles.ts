@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import PrimaryButtonProps from "../../types/SecondaryButtonProps";
+import ButtonProps from "../../types/ButtonProps";
 import { palletCollors } from "../../styles/palletCollors";
 
-export const Button = styled.button<PrimaryButtonProps>`
+export const Button = styled.button<ButtonProps>`
   min-width: 80px;
   max-width: 320px;
   height: 32px;

@@ -41,16 +41,17 @@ export const Title = styled.h1`
 export const SubTitle = styled.h2`
   font-weight: 500;
   margin:  0.24rem;
-  color: ${palletCollors.black2};
+  font-size: .92rem;
+  color: ${palletCollors.black3};
 `;
 
 export const Content = styled.p`
-  color: ${palletCollors.black3};
+  color: ${palletCollors.darkGray2};
   text-align: center;
   width: 92%;
   font-size: 0.88rem;
   font-weight: 400;
- word-break: break-all;
+ word-break: break-word;
 `;
 
 export const TitleContainer = styled.div`

@@ -4,8 +4,9 @@ type HeaderProps = {
     logoSize?: "tiny" | "small" | "medium" | "large";
     size?: "medium" | "large";
     background?: string;
-    showSearchBar?:Boolean;
-    displayElements?: 'center' | 'spaced'
+    showSearchBar?: boolean;
+    displayElements?: 'center' | 'spaced';
+    fixHeader?: boolean;
   };
   
   export default HeaderProps;

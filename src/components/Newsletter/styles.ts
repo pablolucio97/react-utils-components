@@ -11,7 +11,7 @@ export const Container = styled.menu`
 
   box-shadow: rgba(10, 10, 10, 0.1) 0px 8px 16px -2px,
     rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
-  margin: 0.8rem auto;
+  margin: 0.8rem;
   padding: 0.8rem;
 `;
 
@@ -59,7 +59,7 @@ export const TextInput = styled.input<NewsletterProps>`
     ${(props) =>
       props.style?.borderColor
         ? props.style.borderColor
-        : palletCollors.black2};
+        : palletCollors.lightGray2};
   border-radius: ${(props) =>
     props.style?.borderRadius ? props.style.borderRadius : "4px"};
   min-width: 240px;

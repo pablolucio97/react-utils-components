@@ -4,7 +4,7 @@ import * as Styled from './styles'
 
 import CollapsibleContainerProps from '../../types/CollapsibleContainerProps'
 
-const CollapsibleContainer = ({ title, content, currentExpanded, onExpand }: CollapsibleContainerProps) => {
+const CollapsibleContainer = ({ title, content, effectColorOnExpand }: CollapsibleContainerProps) => {
 
     const [isExpanded, setIsExpanded] = useState(true)
 
@@ -14,7 +14,7 @@ const CollapsibleContainer = ({ title, content, currentExpanded, onExpand }: Col
     }
 
     return (
-        <Styled.Container>
+        <Styled.Container effectColorOnExpand={effectColorOnExpand}>
             <Styled.SubContainer className={isExpanded ? '' : 'expandContainer'} >
                 <Styled.Title>{title}</Styled.Title>
                 <Styled.Content className={isExpanded ? 'showContent' : ''}

@@ -14,6 +14,7 @@ type ProductCardProps = {
     }
     animationOnHover?: boolean;
     favoriteProduct?:  () => void;
+    visitProduct?: () => void;
 }
 
 export default ProductCardProps

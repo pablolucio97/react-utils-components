@@ -14,6 +14,7 @@ export const Container = styled.div<SocialRibbonProps>`
   background: ${(props) =>
     props.background ? props.background : palletCollors.primary};
   width: 100vw;
+  padding: 0 2.4rem;
 `;
 
 export const Link = styled.a<SocialRibbonProps>`

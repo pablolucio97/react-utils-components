@@ -1,5 +1,6 @@
 import ProductCardProps from "../../types/ProductCardProps"
 import * as Styled from './styles'
+import { IoMdHeartEmpty } from 'react-icons/io'
 
 const ProductCard = ({
     title,
@@ -10,7 +11,9 @@ const ProductCard = ({
     imgUrl,
     description,
     price,
-    priceOnCard
+    priceOnCard,
+    visitProduct,
+    favoriteProduct
 }: ProductCardProps) => {
     return (
         <Styled.Container
@@ -20,7 +23,11 @@ const ProductCard = ({
             }}
             animationOnHover={animationOnHover}
             size={size}
+            onClick={visitProduct}
         >
+            <Styled.FavoriteButton>
+                <IoMdHeartEmpty size={24} onClick={favoriteProduct} />
+            </Styled.FavoriteButton>
             <Styled.ImgContainer>
                 <Styled.Img src={imgUrl} />
             </Styled.ImgContainer>

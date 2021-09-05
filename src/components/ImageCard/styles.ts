@@ -50,7 +50,7 @@ export const Content = styled.p`
   width: 92%;
   font-size: 0.88rem;
   font-weight: 400;
- word-break: break-all;
+ word-break: break-word;
   text-overflow: hidden;
 `;
 

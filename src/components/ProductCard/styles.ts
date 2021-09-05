@@ -7,6 +7,7 @@ export const Container = styled.div<ProductCardProps>`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
   width: 272px;
   height: 400px;
   padding: 0.8rem;
@@ -17,7 +18,7 @@ export const Container = styled.div<ProductCardProps>`
   background: ${(props) => props.style?.background || palletCollors.white};
   border-radius: ${(props) => props.style?.borderRadius || "4px"};
   transition: all 0.3s ease-in-out;
-
+  cursor: pointer;
   &:hover {
     transform: ${(props) => (props.animationOnHover ? "scale(1.024)" : "none")};
   }
@@ -27,7 +28,7 @@ export const Title = styled.h1`
   font-weight: 500;
   margin: 0.2rem;
   font-size: 0.92rem;
-  word-break: break-all;
+  word-break: break-word;
 `;
 
 export const Description = styled.span`
@@ -45,7 +46,7 @@ export const Price = styled.span`
 export const CardPrice = styled.span`
   font-weight: 400;
   margin: 0.24rem;
-  font-size: .88rem;
+  font-size: 0.88rem;
   color: ${palletCollors.lightGray2};
 `;
 
@@ -55,7 +56,7 @@ export const Content = styled.p`
   width: 92%;
   font-size: 0.88rem;
   font-weight: 400;
-  word-break: break-all;
+  word-break: break-word;
   text-overflow: hidden;
 `;
 
@@ -89,4 +90,20 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const FavoriteButton = styled.button`
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 0.24rem;
+  border-radius: 100%;
+  transition: all 0.12s ease;
+
+  &:hover {
+    color: ${palletCollors.primary};
+  }
 `;

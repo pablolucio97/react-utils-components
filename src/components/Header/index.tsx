@@ -8,13 +8,15 @@ const Header = ({
     logoUrl,
     showSearchBar,
     background,
-    displayElements
+    displayElements,
+    fixHeader
 }: HeaderProps) => {
     return (
         <Styled.Container
             size={size}
             background={background}
             displayElements={displayElements}
+            fixHeader={fixHeader}
         >
             <Styled.TitleContainer>
                 <Styled.Link>

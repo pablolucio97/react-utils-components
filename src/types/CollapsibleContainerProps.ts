@@ -5,7 +5,6 @@ type CollapsibleContainerProps = {
         background?: string;
         borderRadius?: string;
     }
-    currentExpanded?: boolean;
-    onExpand?: () => void;
+    effectColorOnExpand?: string
 }
 export default CollapsibleContainerProps
